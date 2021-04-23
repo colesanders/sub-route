@@ -1,0 +1,7 @@
+<ion-button subNavigate="parent/child-one">Back to One</ion-button>
+<div *ngIf="routeTree | async as tree">
+  <h1>Route: {{tree.url}}</h1>
+  <h3>Current Path: {{tree.path}}</h3>
+  <p>Current Depth: {{tree.depth}}</p>
+
+</div>

@@ -1,0 +1,20 @@
+<ion-button subNavigate="parent/child-two">Head over to two</ion-button>
+<p>modal-child-one works!</p>
+
+<ion-button (click)="cancel.emit()">Log Event</ion-button>
+<p></p>
+
+<ion-button subNavigate="parent/child-one/depth-two">Create Two</ion-button>
+<p></p>
+
+<div>
+  <div *ngIf="routeTree | async as tree">
+    <h1>Route: {{tree.url}}</h1>
+    <h3>Current Path: {{tree.path}}</h3>
+    <p>Current Depth: {{tree.depth}}</p>
+
+  </div>
+</div>
+
+
+<sub-route-outlet></sub-route-outlet>
